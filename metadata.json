@@ -1,0 +1,6 @@
+
+{
+  "name": "WXP Work Management Agent",
+  "description": "An advanced application to manage work tasks with AI-powered assistance for summarization, project breakdown, task suggestion, and a dashboard for progress tracking.",
+  "requestFramePermissions": []
+}

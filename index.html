@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WXP Work Management Agent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'slate': {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155', // Main border color
+              800: '#1e293b', // Main card background
+              900: '#0f172a', // Slightly lighter than body, for depth if needed
+              950: '#020617', // Main body background
+            },
+            'sky': {
+              300: '#7dd3fc',
+              400: '#38bdf8', // Primary accent
+              500: '#0ea5e9', // Slightly darker accent
+              600: '#0284c7', // Hover/active accent
+              700: '#0369a1',
+            },
+            'amber': { 
+              400: '#fbbf24',
+              500: '#f59e0b',
+            },
+            'rose': { 
+                400: '#fb7185',
+                500: '#f43f5e',
+            },
+            'emerald': {
+                400: '#34d399',
+                500: '#10b981',
+            }
+          },
+          animation: {
+            'modalShow': 'modalShow 0.3s ease-out forwards',
+            'subtlePing': 'subtlePing 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+            'buttonPress': 'buttonPress 0.1s ease-in-out',
+          },
+          keyframes: {
+            modalShow: {
+              '0%': { opacity: '0', transform: 'translateY(-20px) scale(0.95)' },
+              '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+            },
+            subtlePing: {
+              '75%, 100%': {
+                transform: 'scale(1.05)',
+                opacity: '0',
+              },
+            },
+            buttonPress: {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(0.97)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.0.1"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
